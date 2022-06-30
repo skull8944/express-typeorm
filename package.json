@@ -1,0 +1,38 @@
+{
+  "name": "typeorm_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "dev": "nodemon --watch src -e ts --exec npm run dev:nowatch",
+    "dev:run": "ts-node ./src/app.ts",
+    "dev:nowatch": "npm run lint && ts-node ./src/app.ts"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dayjs": "^1.11.3",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.18",
+    "pg": "^8.7.3",
+    "pino": "^8.1.0",
+    "pino-pretty": "^8.1.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node-dev": "^2.0.0",
+    "typeorm": "^0.3.6",
+    "zod": "^3.17.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.18.0",
+    "jest": "^28.1.1",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  }
+}
