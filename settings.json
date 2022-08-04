@@ -1,0 +1,10 @@
+{
+  "sonarlint.rules": {
+    "typescript:S1488": {
+      "level": "off"
+    },
+    "typescript:S125": {
+      "level": "off"
+    }
+  }
+}

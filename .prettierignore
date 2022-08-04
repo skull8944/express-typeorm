@@ -1,0 +1,7 @@
+/node_modules/
+/docs/
+/public/
+/ssl/
+/src/entity/
+/src/migration/
+/src/subscriber/
