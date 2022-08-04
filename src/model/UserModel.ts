@@ -3,10 +3,15 @@ import { getConnection } from 'typeorm';
 
 export const addUser = async (user: Omit<User, 'id'>) => {
   const connection = getConnection('ea');
-  const sql = `
-    insert into "user" (name, email, password, manager_id)
-    values ('${user.name}','${user.email}','${user.password}', ${user.manager})
-  `
+  let sql = ``;
+  if(user.manager == undefined) sql = `
+      insert into "user" (name, email, password)
+      values ('${user.name}','${user.email}','${user.password}')
+    `
+   else sql =  `
+   insert into "user" (name, email, password, manager_id)
+   values ('${user.name}','${user.email}','${user.password}', ${user.manager})
+ `
   const result = await connection.query(sql)
   return result;
 }
